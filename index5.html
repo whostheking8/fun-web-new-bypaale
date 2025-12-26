@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Page</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(180deg, #b30000, #000000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    #startBtn {
+      background: linear-gradient(45deg, #ff0000, #6b0000);
+      color: white;
+      border: none;
+      padding: 16px 42px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+      transition: transform 0.2s ease;
+    }
+
+    #startBtn:active {
+      transform: scale(0.95);
+    }
+
+    .image-wrapper {
+      display: none;
+      margin-top: 25px;
+    }
+
+    .image-wrapper img {
+      width: 80vw;
+      max-width: 300px;
+      border-radius: 15px;
+      animation: zoomIn 1.5s ease forwards;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.2);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <button id="startBtn">START</button>
+
+    <div class="image-wrapper" id="imageBox">
+      <img
+        src="https://i.ibb.co/VYQSJySk/20251226-002548.png"
+        alt="Gambar Utama">
+    </div>
+  </div>
+
+  <!-- AUDIO -->
+  <audio id="audio" preload="auto">
+    <source
+      src="https://files.catbox.moe/ga4xli.mp3"
+      type="audio/mpeg">
+  </audio>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
